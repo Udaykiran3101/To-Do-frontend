@@ -6,7 +6,7 @@ const Create = () => {
     const [task, setTask] = useState('');
 
     const createTask = () => {
-        axios.post('https://to-do-backend-s0bh.onrender.com/add', { task: task.trim() })
+        axios.post('https://to-do-backend-1-v7vb.onrender.com/add', { task: task.trim() })
             .then(result => {
                 console.log(result.data);
                 window.location.reload();
