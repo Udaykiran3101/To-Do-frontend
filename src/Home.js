@@ -10,13 +10,13 @@ const Home = () => {
     const [taskid, setTaskid] = useState('');
 
     useEffect(() => {
-        axios.get('https://to-do-backend-s0bh.onrender.com/get')
+        axios.get('https://to-do-backend-1-v7vb.onrender.com/get')
             .then(result => setTodos(result.data))
             .catch(err => console.log(err));
     }, []);
 
     const edit = (id) => {
-        axios.put(`https://to-do-backend-s0bh.onrender.com/edit/${id}`)
+        axios.put(`https://to-do-backend-1-v7vb.onrender.com/edit/${id}`)
             .then(result => {
                 console.log(result.data);
                 const updatedTodos = todos.map(todo => {
@@ -31,7 +31,7 @@ const Home = () => {
     };
 
     const Update = (id, updatedTask) => {
-        axios.put(`https://to-do-backend-s0bh.onrender.com/update/${id}`, { task: updatedTask })
+        axios.put(`https://to-do-backend-1-v7vb.onrender.com/update/${id}`, { task: updatedTask })
             .then(result => {
                 console.log(result.data);
                 const updatedTodos = todos.map(todo => {
@@ -49,7 +49,7 @@ const Home = () => {
     };
 
     const Hdelete = (id) => {
-        axios.delete(`https://to-do-backend-s0bh.onrender.com/delete/${id}`)
+        axios.delete(`https://to-do-backend-1-v7vb.onrender.com/delete/${id}`)
             .then(result => {
                 console.log(result.data);
                 const updatedTodos = todos.filter(todo => todo._id !== id);
